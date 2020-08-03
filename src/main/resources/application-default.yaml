@@ -1,0 +1,21 @@
+
+app:
+  environment: DEVELOPMENT
+
+database:
+  host: starter-dev.rds.amazonaws.com
+  database: starter-dev
+  username: starter-dev
+  password: starter-dev
+
+aws:
+  access-key: starter-dev
+  secret-key: starter-dev
+  region: us-east-1
+
+logging:
+  pattern:
+    console: '%d{HH:mm:ss} %X{email} %cyan(%logger{36}) - %msg%n'
+  level:
+    ROOT: WARN
+    com.leadiro: TRACE

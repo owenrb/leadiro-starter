@@ -1,0 +1,36 @@
+
+app:
+  version: starter-master-1
+  timestamp: Thu Jun 18 15:32:18 UTC 2020
+
+server:
+  port: 8090
+  compression:
+    enabled: true
+    mime-types: application/json
+
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://${database.host}:5432/${database.database}?ApplicationName=StarterApi
+    username: ${database.username}
+    password: ${database.password}
+  jackson:
+    default-property-inclusion: non_null
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  jmx:
+    enabled: false
+  groovy:
+    template:
+      check-template-location: false
+  main:
+    allow-bean-definition-overriding: true
+    banner-mode: "off"
+
+
+
+
+

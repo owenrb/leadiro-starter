@@ -1,0 +1,24 @@
+
+app:
+  environment: PRODUCTION
+
+database:
+  host: starter-prod.rds.amazonaws.com
+  database: starter-prod
+  username: starter-prod
+  password: starter-prod
+
+aws:
+  access-key: starter-prod
+  secret-key: starter-prod
+  region: us-east-1
+
+logging:
+  pattern:
+    console: '[%thread] %d{yyyy-MM-dd HH:mm:ss} %X{email} %-5level %logger{36} - %msg%n'
+  level:
+    root: INFO
+    com.leadiro: DEBUG
+    com.amazonaws.services.s3.AmazonS3Client: ERROR
+    #Spring
+    org.springframework.boot.web.embedded.tomcat.TomcatWebServer: DEBUG
