@@ -38,7 +38,7 @@ public class ConcreteMuseumService implements MuseumService {
 	@Override
 	public String getById(String id) {
 		log.debug("Retrieving record id: {} ...", id);
-		return museumDao.getById(id).orElse("Not found");
+		return museumDao.getById(id).orElse(MuseumService.NOT_FOUND_PAYLOAD);
 	}
 
 }

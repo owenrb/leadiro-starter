@@ -5,6 +5,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.FilterType;
 
@@ -14,6 +15,7 @@ import com.leadiro.starter.controller.auth.JwtBearerTokenAuthenticationFilter;
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.leadiro"}, excludeFilters={
 		  @ComponentScan.Filter(type=FilterType.ASSIGNABLE_TYPE, value=JwtBearerTokenAuthenticationFilter.class)})
+@EnableCaching
 public class Application implements ApplicationRunner {
     private static final String APP_NAME = "starter";
 

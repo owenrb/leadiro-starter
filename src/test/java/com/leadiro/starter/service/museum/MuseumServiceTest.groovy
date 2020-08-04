@@ -49,7 +49,7 @@ class MuseumServiceTest {
 		Assert.assertNotNull(actual);
 		Assert.assertFalse(actual.isEmpty());
 		
-		Assert.assertNotEquals("Not found", actual)
+		Assert.assertNotEquals(MuseumService.NOT_FOUND_PAYLOAD, actual)
 	}
 	
 	@Test
@@ -60,7 +60,7 @@ class MuseumServiceTest {
 		Assert.assertNotNull(actual);
 		Assert.assertFalse(actual.isEmpty());
 		
-		Assert.assertEquals("Not found", actual)
+		Assert.assertEquals(MuseumService.NOT_FOUND_PAYLOAD, actual)
 	}
 	
 }
