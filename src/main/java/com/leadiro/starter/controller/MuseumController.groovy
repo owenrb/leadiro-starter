@@ -26,14 +26,14 @@ class MuseumController {
 	
 	
 	@GetMapping(path='/museum/{id}', produces= ['application/json'])
-	def getTemplateSummary(@PathVariable String id) {
+	def getById(@PathVariable String id) {
 		
 		return service.getById(id)
 		
 	}
 	
 	@GetMapping(path='/museum/{item}/{id}', produces= ['application/json'])
-	def getTemplateSummary(@PathVariable String item, @PathVariable String id) {
+	def getByIdHack(@PathVariable String item, @PathVariable String id) {
 		
 		return service.getById(item + "/" + id)
 		
