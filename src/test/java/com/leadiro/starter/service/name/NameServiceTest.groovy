@@ -3,6 +3,7 @@ package com.leadiro.starter.service.name
 import com.leadiro.starter.service.NameService
 import groovy.transform.CompileStatic
 import org.junit.Assert
+import org.junit.Ignore
 import org.junit.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
@@ -13,6 +14,7 @@ import com.leadiro.starter.Application
 @CompileStatic
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class)
+@Ignore
 class NameServiceTest {
     @Autowired private NameService name
 	
