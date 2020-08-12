@@ -46,7 +46,7 @@ class NameServiceTest {
 		Assert.assertArrayEquals("Leadiro User - Bsc", new String[] {"Leadiro", "User"}, name.process("Leadiro User - Bsc"));
 		Assert.assertArrayEquals("Leadiro User | Bsc", new String[] {"Leadiro", "User"}, name.process("Leadiro User | Bsc"));
 		Assert.assertArrayEquals("~~~ Leadiro User ~~~", new String[] {"Leadiro", "User"}, name.process("~~~ Leadiro User ~~~"));
-		//Assert.assertArrayEquals("Leadiro User Certified Professional", new String[] {"Leadiro", "User"}, name.process("Leadiro User Certified Professional"));
+		Assert.assertArrayEquals("Leadiro User Certified Professional", new String[] {"Leadiro", "User"}, name.process("Leadiro User Certified Professional"));
 		Assert.assertArrayEquals("Leadiro User 99", new String[] {"Leadiro", "User"}, name.process("Leadiro User 99"));
 		
 	}
@@ -60,12 +60,12 @@ class NameServiceTest {
 	
 	@Test
 	public void suffix() {
-		//Assert.assertArrayEquals("Leadiro User Dip Ed", new String[]{"Leadiro", "User"}, name.process("Leadiro User Dip Ed"));
+		Assert.assertArrayEquals("Leadiro User Dip Ed", new String[]{"Leadiro", "User"}, name.process("Leadiro User Dip Ed"));
 		Assert.assertArrayEquals("Leadiro User DipEd", new String[]{"Leadiro", "User"}, name.process("Leadiro User DipEd"));
 		Assert.assertArrayEquals("Leadiro R User MSc MPH DRes/PhD", new String[]{"Leadiro", "User"}, name.process("Leadiro R User MSc MPH DRes/PhD"));
 		Assert.assertArrayEquals("Leadiro User Phd", new String[]{"Leadiro", "User"}, name.process("Leadiro User Phd"));
 		Assert.assertArrayEquals("Leadiro User MacA", new String[]{"Leadiro", "User"}, name.process("Leadiro User MacA"));
-		//Assert.assertArrayEquals("Leadiro User assoc prof", new String[]{"Leadiro", "User"}, name.process("Leadiro User assoc prof"));
+		Assert.assertArrayEquals("Leadiro User assoc prof", new String[]{"Leadiro", "User"}, name.process("Leadiro User assoc prof"));
 	}
 
 	@Test
@@ -81,13 +81,13 @@ class NameServiceTest {
 	public void capitalisation() {
 		Assert.assertArrayEquals("HEMANT AHIRKAR", new String[]{"Hemant", "Ahirkar"}, name.process("HEMANT AHIRKAR"));
 		Assert.assertArrayEquals("hemant ahirkar", new String[]{"Hemant", "Ahirkar"}, name.process("hemant ahirkar"));
-		//Assert.assertArrayEquals("Hemant deAhirkar", new String[]{"Hemant", "deAhirkar"}, name.process("Hemant deAhirkar"));
+		Assert.assertArrayEquals("Hemant deAhirkar", new String[]{"Hemant", "deAhirkar"}, name.process("Hemant deAhirkar"));
 	}
 
 	@Test
 	public void nonAlpha() {
-		//Assert.assertArrayEquals(new String[]{"Hemant", "Ahirkar"}, name.process("'HEMANT AHIRKAR'"));
-		//Assert.assertArrayEquals(new String[]{"Hemant", "Ahirkar"}, name.process("-hemant ahirkar"));
+		Assert.assertArrayEquals(new String[]{"Hemant", "Ahirkar"}, name.process("'HEMANT AHIRKAR'"));
+		Assert.assertArrayEquals(new String[]{"Hemant", "Ahirkar"}, name.process("-hemant ahirkar"));
 	}
 
 	@Test
